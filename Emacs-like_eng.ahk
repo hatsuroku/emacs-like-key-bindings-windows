@@ -282,11 +282,25 @@ CapsLock & d::
     delete_char()
   Return
 
+CapsLock & h::
+  If is_target()
+    Send %A_ThisHotkey%
+  Else
+    delete_backward_char()
+  Return
+
 CapsLock & k::
   If is_target()
     Send %A_ThisHotkey%
   Else
     kill_line()
+  Return
+
+CapsLock & y::
+  If is_target()
+    Send %A_ThisHotkey%
+  Else
+    yank()
   Return
 
 CapsLock & a::
@@ -323,6 +337,13 @@ CapsLock & b::
   Else
     backward_char()
   Return
+
+CapsLock & /::
+  If is_target()
+    Send %A_ThisHotkey%
+  Else
+    undo()
+Return
 
 CapsLock & Space::
   If is_target()
